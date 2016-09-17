@@ -6,7 +6,7 @@ var PORT = 8080;
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.send('Welcome to the jungle...')
+  res.render('index.html')
 })
 
 var server = app.listen(PORT, function () {
