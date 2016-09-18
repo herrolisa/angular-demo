@@ -28,9 +28,19 @@
   </div>
 
   <div>
-    <b>Books:</b>
+    <h3>Add A Book:</h3>
+    <div class="add_book">
+      <label>Title
+        <input type="text" name="title" placeholder="Goosebumps" ng-model="author">
+      </label>
+      <label>Author
+        <input type="text" name="author" placeholder="R.L. Stein" ng-model="title">
+      </label>
+    </div>
+    <button ng-click="BookService.addBook({title: title, author: author})">Add Book</button>
+    <h3>Books:</h3>
     <ul class="value_of_books">
-      <li ng-repeat="book in books">
+      <li ng-repeat="book in BookService.books">
         <h4 class="book_title">{{book.title}}</h4>
         <p class="book_author">{{book.author}}</p>
       </li>
