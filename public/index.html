@@ -22,9 +22,19 @@
     <h2>{{mainCharacter}}</h2>
   </div>
   <h4>{{APP_VERSION}}</h4>
+
   <div>
-    <p><b>Character Version:</b> {{characterVersion}} </p>
-    <p><b>Books:</b> {{books}} </p>
+    <b>Character Version:</b> {{characterVersion}}
+  </div>
+
+  <div>
+    <b>Books:</b>
+    <ul class="value_of_books">
+      <li ng-repeat="book in books">
+        <h4 class="book_title">{{book.title}}</h4>
+        <p class="book_author">{{book.author}}</p>
+      </li>
+    </ul>
   </div>
 
 </body>
