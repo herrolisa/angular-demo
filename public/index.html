@@ -37,7 +37,7 @@
         <input type="text" name="author" placeholder="R.L. Stein" ng-model="title">
       </label>
     </div>
-    <button ng-click="BookService.addBook({title: title, author: author})">Add Book</button>
+    <button ng-click="BookService.addBook({title: title, author: author}); title=''; author='';">Add Book</button>
     <h3>Books:</h3>
     <ul class="value_of_books">
       <li ng-repeat="book in BookService.books">
