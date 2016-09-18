@@ -12,3 +12,13 @@ angular.module('myApp')
         $scope.movies = response.data;
       })
   }])
+  .controller('booksController', ['$scope', 'BookService', function ($scope, BookService) {
+    $scope.BookService = BookService;
+  }])
+  .controller('moviesController', ['$scope', 'Movies', function ($scope, Movies) {
+    $scope.movies = [];
+    Movies.getMovies()
+      .then(function (response) {
+        $scope.movies = response.data;
+      })
+  }])
