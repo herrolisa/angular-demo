@@ -1,5 +1,6 @@
 angular.module('myApp')
-  .controller('myController', ['$scope', function ($scope) {
+  .controller('myController', ['$scope', 'mainCharacter', function ($scope, mainCharacter) {
     $scope.myFirstName = 'Lisa';
     $scope.myModel = 'Real Player One';
+    $scope.mainCharacter = mainCharacter;
   }])
