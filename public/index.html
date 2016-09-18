@@ -10,6 +10,7 @@
   <script type="text/javascript" src="/js/constants.js"></script>
   <script type="text/javascript" src="/js/factories.js"></script>
   <script type="text/javascript" src="/js/services.js"></script>
+  <script type="text/javascript" src="/js/providers.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="myController">
   <h1>{{'Hello' + 'Angular!'}}</h1>
@@ -43,6 +44,16 @@
       <li ng-repeat="book in BookService.books">
         <h4 class="book_title">{{book.title}}</h4>
         <p class="book_author">{{book.author}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Movies:</h3>
+    <ul class="value_of_movies">
+      <li ng-repeat="movies in movies">
+        <h4 class="movies_title">{{movies.title}}</h4>
+        <p class="movie_year">{{movies.year}}</p>
       </li>
     </ul>
   </div>
